@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Bkfdev\ModelStateMachine\Jobs;
+namespace Bkfdev\EloquentStatesMachine\Jobs;
 
 
-use Bkfdev\ModelStateMachine\Exceptions\InvalidStartingStateException;
-use Bkfdev\ModelStateMachine\Models\PendingTransition;
+use Bkfdev\EloquentStatesMachine\Exceptions\InvalidStartingStateException;
+use Bkfdev\EloquentStatesMachine\Models\PendingTransition;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;

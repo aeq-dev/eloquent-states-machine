@@ -1,6 +1,6 @@
 <?php
 
-use Bkfdev\ModelStateMachine\Models\StateHistory;
+use Bkfdev\EloquentStatesMachine\Models\StateHistory;
 use Faker\Generator as Faker;
 
 $factory->define(StateHistory::class, function (Faker $faker) {

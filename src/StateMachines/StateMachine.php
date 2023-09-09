@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Bkfdev\ModelStateMachine\StateMachines;
+namespace Bkfdev\EloquentStatesMachine\StateMachines;
 
 
-use Bkfdev\ModelStateMachine\Exceptions\TransitionNotAllowedException;
-use Bkfdev\ModelStateMachine\Models\PendingTransition;
-use Bkfdev\ModelStateMachine\Models\StateHistory;
+use Bkfdev\EloquentStatesMachine\Exceptions\TransitionNotAllowedException;
+use Bkfdev\EloquentStatesMachine\Models\PendingTransition;
+use Bkfdev\EloquentStatesMachine\Models\StateHistory;
 use Carbon\Carbon;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Database\Eloquent\Model;

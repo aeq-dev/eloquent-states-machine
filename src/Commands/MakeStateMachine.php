@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Bkfdev\ModelStateMachine\Commands;
+namespace Bkfdev\EloquentStatesMachine\Commands;
 
 
 use Illuminate\Console\GeneratorCommand;

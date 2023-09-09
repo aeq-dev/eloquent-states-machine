@@ -1,11 +1,11 @@
 <?php
 
-namespace Bkfdev\ModelStateMachine;
+namespace Bkfdev\EloquentStatesMachine;
 
-use Bkfdev\ModelStateMachine\Commands\MakeStateMachine;
+use Bkfdev\EloquentStatesMachine\Commands\MakeStateMachine;
 use Illuminate\Support\ServiceProvider;
 
-class ModelStateMachineServiceProvider extends ServiceProvider
+class EloquentStatesMachineServiceProvider extends ServiceProvider
 {
     public function boot()
     {

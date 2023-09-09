@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Bkfdev\ModelStateMachine\StateMachines\StateMachine;
+use Bkfdev\EloquentStatesMachine\StateMachines\StateMachine;
 
 class DummyClass extends StateMachine
 {

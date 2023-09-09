@@ -1,6 +1,6 @@
 <?php
 
-use Bkfdev\ModelStateMachine\Models\PendingTransition;
+use Bkfdev\EloquentStatesMachine\Models\PendingTransition;
 use Carbon\Carbon;
 use Faker\Generator as Faker;
 

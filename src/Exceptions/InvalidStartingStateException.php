@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Bkfdev\ModelStateMachine\Exceptions;
+namespace Bkfdev\EloquentStatesMachine\Exceptions;
 
 
 use Exception;

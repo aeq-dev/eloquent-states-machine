@@ -1,12 +1,12 @@
 {
-    "name": "bkfdev/model-state-machine",
+    "name": "bkfdev/eloquent-states-machine",
     "description": "State machines for your Laravel Eloquent models",
     "keywords": [
         "bkfdev",
         "aeq dev",
-        "model-state-machine"
+        "eloquent-states-machine"
     ],
-    "homepage": "https://github.com/aeq-dev/model-state-machine",
+    "homepage": "https://github.com/aeq-dev/eloquent-states-machine",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Bkfdev\\ModelStateMachine\\": "src"
+            "Bkfdev\\EloquentStatesMachine\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bkfdev\\ModelStateMachine\\Tests\\": "tests"
+            "Bkfdev\\EloquentStatesMachine\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Bkfdev\\ModelStateMachine\\ModelStateMachineServiceProvider"
+                "Bkfdev\\EloquentStatesMachine\\EloquentStatesMachineServiceProvider"
             ]
         }
     }

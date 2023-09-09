@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Bkfdev\ModelStateMachine\StateMachines;
+namespace Bkfdev\EloquentStatesMachine\StateMachines;
 
-use Bkfdev\ModelStateMachine\Exceptions\TransitionNotAllowedException;
-use Bkfdev\ModelStateMachine\Models\PendingTransition;
-use Bkfdev\ModelStateMachine\Models\StateHistory;
+use Bkfdev\EloquentStatesMachine\Exceptions\TransitionNotAllowedException;
+use Bkfdev\EloquentStatesMachine\Models\PendingTransition;
+use Bkfdev\EloquentStatesMachine\Models\StateHistory;
 use Carbon\Carbon;
 
 /**
  * Class State
- * @package Bkfdev\ModelStateMachine\StateMachines
+ * @package Bkfdev\EloquentStatesMachine\StateMachines
  * @property string $state
  * @property StateMachine $stateMachine
  */

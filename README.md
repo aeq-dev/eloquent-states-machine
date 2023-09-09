@@ -72,13 +72,13 @@ $salesOrder->status()->history()->get();
 You can install the package via composer:
 
 ```bash
-composer require bkfdev/model-state-machine
+composer require bkfdev/eloquent-states-machine
 ```
 
 Next, you must export the package migrations
 
 ```bash
-php artisan vendor:publish --provider="Bkfdev\ModelStateMachine\ModelStateMachineServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Bkfdev\EloquentStatesMachine\EloquentStatesMachineServiceProvider" --tag="migrations"
 ```
 
 Finally, prepare required database tables
@@ -107,7 +107,7 @@ After running the command, we will have a new StateMachine class created
 in the `App\StateMachines` directory. The class will have the following code.
 
 ```php
-use Bkfdev\ModelStateMachine\StateMachines\StateMachine;
+use Bkfdev\EloquentStatesMachine\StateMachines\StateMachine;
 
 class StatusStateMachine extends StateMachine
 {
@@ -180,7 +180,7 @@ Once we have defined our StateMachine, we can register it in our `SalesOrder` mo
 attribute. Here, we set the bound model `field` and state machine class that will control it.
 
 ```php
-use Bkfdev\ModelStateMachine\Traits\HasStateMachines;
+use Bkfdev\EloquentStatesMachine\Traits\HasStateMachines;
 use App\StateMachines\StatusStateMachine;
 
 class SalesOrder extends Model

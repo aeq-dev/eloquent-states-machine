@@ -1,10 +1,10 @@
 <?php
 
-namespace Bkfdev\ModelStateMachine\Traits;
+namespace Bkfdev\EloquentStatesMachine\Traits;
 
-use Bkfdev\ModelStateMachine\Models\PendingTransition;
-use Bkfdev\ModelStateMachine\Models\StateHistory;
-use Bkfdev\ModelStateMachine\StateMachines\State;
+use Bkfdev\EloquentStatesMachine\Models\PendingTransition;
+use Bkfdev\EloquentStatesMachine\Models\StateHistory;
+use Bkfdev\EloquentStatesMachine\StateMachines\State;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
@@ -13,7 +13,7 @@ use Javoscript\MacroableModels\Facades\MacroableModels;
 
 /**
  * Trait HasStateMachines
- * @package Bkfdev\ModelStateMachine\Traits
+ * @package Bkfdev\EloquentStatesMachine\Traits
  * @property array $stateMachines
  */
 trait HasStateMachines

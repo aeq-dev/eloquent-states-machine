@@ -1,13 +1,13 @@
 <?php
 
-namespace Bkfdev\ModelStateMachine\Models;
+namespace Bkfdev\EloquentStatesMachine\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class PendingTransition
- * @package Bkfdev\ModelStateMachine\Models
+ * @package Bkfdev\EloquentStatesMachine\Models
  * @property string $field
  * @property string $from
  * @property string $to
