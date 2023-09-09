@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
+use UnitEnum;
 
 abstract class StateMachine
 {
@@ -30,7 +31,7 @@ abstract class StateMachine
     {
         $field = $this->field;
 
-        return $this->model->$field;
+        return $this->model->$field->value;
     }
 
     public function history()
@@ -71,6 +72,11 @@ abstract class StateMachine
 
     public function canBe($from, $to)
     {
+        if ($from instanceof UnitEnum)
+            $from = $from->value;
+        if ($to instanceof UnitEnum)
+            $to = $to->value;
+
         $availableTransitions = $this->transitions()[$from] ?? [];
 
         return collect($availableTransitions)->contains($to);
@@ -96,10 +102,15 @@ abstract class StateMachine
      */
     public function transitionTo($from, $to, $customProperties = [], $responsible = null)
     {
+        if ($from instanceof UnitEnum)
+            $from = $from->value;
+
+        if ($to instanceof UnitEnum)
+            $to = $to->value;
+
         if ($to === $this->currentState()) {
             return;
         }
-
         if (!$this->canBe($from, $to) && !$this->canBe($from, '*') && !$this->canBe('*', $to) && !$this->canBe('*', '*')) {
             throw new TransitionNotAllowedException($from, $to, get_class($this->model));
         }
